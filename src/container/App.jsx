@@ -40,13 +40,18 @@ class App extends Component {
   }
 
   calcFaceLocation = (data) => {
-    const clarifaiFace =
-      data.outputs[0].data.regions[0].region_info.bounding_box;
+    console.log(data);
     const image = document.getElementById("inputImg");
     const width = Number(image.width);
     const height = Number(image.height);
+    const clarifaiFace =
+      data.outputs[0].data.regions[0].region_info.bounding_box;
     return {
-      // this obj will fill out the box state
+      // this obj will fill out the box state by using the values from the ML model
+      // the values are floats betweem 0 and 1. You can figure out the position
+      // by using the value x the image h/w value itself. ex: 0.33 left_col * 100px
+      // would equal 33px, which is where the column is located on the pic. Repeat for
+      // all four and you have a box around the face
       leftCol: clarifaiFace.left_col * width,
       topRow: clarifaiFace.top_row * height,
       rightCol: width - clarifaiFace.right_col * width,
@@ -55,7 +60,7 @@ class App extends Component {
   };
 
   displayFace = (box) => {
-    console.log(box);
+    // console.log(box);
     this.setState({ box: box });
   };
 

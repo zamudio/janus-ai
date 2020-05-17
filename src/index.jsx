@@ -3,14 +3,9 @@ import ReactDOM from "react-dom";
 import "./styles/_index.css";
 import App from "./container/App";
 import "tachyons";
-// import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(
-  // <React.StrictMode>
-  <App />,
-  // </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+// serviceWorker.register();
