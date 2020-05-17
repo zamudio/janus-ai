@@ -50,6 +50,14 @@ const Register = ({ onRouteChange }) => {
               value="Sign Up"
             />
           </div>
+          <div className="lh-copy mt3">
+            <p
+              onClick={() => onRouteChange("signin")}
+              className="f6 link dim black db pointer"
+            >
+              Back to login?
+            </p>
+          </div>
         </div>
       </main>
     </article>
