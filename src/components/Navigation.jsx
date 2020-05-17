@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import logo from "../images/components/logo.png";
 import "../styles/components/_navigation.css";
 
-const Navigation = () => {
+const Navigation = ({ onRouteChange }) => {
   return (
     <nav className="flex justify-between ">
       <div className="f3 pa3">
@@ -17,7 +17,12 @@ const Navigation = () => {
           </div>
         </Tilt>
       </div>
-      <p className="f3 link dim black underline pa3 pointer">Sign Out</p>
+      <p
+        onClick={() => onRouteChange("signin")}
+        className="f3 link dim black underline pa3 pointer"
+      >
+        Sign Out
+      </p>
     </nav>
   );
 };
