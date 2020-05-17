@@ -34,6 +34,8 @@ class App extends Component {
       imageUrl: "",
       box: {},
       route: "signin",
+      isSignedIn: false,
+      isAtRegister: false,
     };
   }
 
@@ -70,6 +72,15 @@ class App extends Component {
   };
 
   onRouteChange = (route) => {
+    if (route === "signout") {
+      this.setState({ isSignedIn: false, isAtRegister: false });
+    } else if (route === "home") {
+      this.setState({ isSignedIn: true, isAtRegister: false });
+    } else if (route === "register") {
+      this.setState({ isSignedIn: false, isAtRegister: true });
+    } else if (route === "signin") {
+      this.setState({ isSignedIn: false, isAtRegister: false });
+    }
     this.setState({ route: route });
   };
 
@@ -77,7 +88,11 @@ class App extends Component {
     return (
       <div className="App">
         <Particles className="particles" params={particleOpts} />
-        <Navigation onRouteChange={this.onRouteChange} />
+        <Navigation
+          isAtRegister={this.state.isAtRegister}
+          isSignedIn={this.state.isSignedIn}
+          onRouteChange={this.onRouteChange}
+        />
         {this.state.route === "home" ? (
           <div>
             <ImageLinkBar
@@ -89,10 +104,10 @@ class App extends Component {
               imageUrl={this.state.imageUrl}
             />
           </div>
-        ) : this.state.route === "signin" ? (
-          <Signin onRouteChange={this.onRouteChange} />
-        ) : (
+        ) : this.state.route === "register" ? (
           <Register onRouteChange={this.onRouteChange} />
+        ) : (
+          <Signin onRouteChange={this.onRouteChange} />
         )}
       </div>
     );
