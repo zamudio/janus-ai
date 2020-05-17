@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import "../styles/container/App.css";
+// import Logo from "../components/Logo";
+import "../styles/container/_app.css";
 
 function App() {
   return (
