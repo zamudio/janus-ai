@@ -5,7 +5,7 @@ const ImageLinkBar = ({ onInputChange, onBtnSubmit }) => {
     <div className="">
       <p className="f3">
         {
-          "The SmartBrain app will detect faces in your pictures. Give it a try by pasting a URL below."
+          "The Janus app will detect faces in your pictures. Give it a try by pasting a URL below."
         }
       </p>
       <div className="center">

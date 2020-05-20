@@ -7,7 +7,7 @@ const Signin = ({ onRouteChange }) => {
         <div className="measure">
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
             <legend className="f1 fw6 ph0 mh0">Welcome</legend>
-            <h4>The SmartBrain app will detect faces in your pictures</h4>
+            <h4>The Janus app will detect faces in your pictures</h4>
             <div className="mt3">
               <label className="db fw6 lh-copy f6" htmlFor="email-address">
                 Email
@@ -45,7 +45,7 @@ const Signin = ({ onRouteChange }) => {
               onClick={() => onRouteChange("register")}
               className="f6 link dim black db pointer"
             >
-              New? Signup!
+              New? Sign up!
             </p>
           </div>
         </div>
