@@ -6,8 +6,9 @@
 This app allows a user to sign up and upload photos that a ML algorithm will be run on to select the faces in the picture. Think Facebook's tagging feature. I built this fullstack app to gain experience working on a fullstack app with React, Node && Express, and to further gain experience with fetching RESTful APIs.
 
 ## Screenshot
-Include logo/demo screenshot etc.
-<img src="" alt="screenshot" width="450" height="250" />
+<img src="https://github.com/zamudio/smartbrain-ai/blob/master/public/project_screenshot_face.png" alt="screenshot" width="450" height="250" />
+<img src="https://github.com/zamudio/smartbrain-ai/blob/master/public/project_screenshot_rock_climber.png" alt="screenshot" width="450" height="250" />
+<img src="https://github.com/zamudio/smartbrain-ai/blob/master/public/project_screenshot_home.png" alt="screenshot" width="450" height="250" />
 
 ## How to use?
 Go [here](https://smartbrain-ai.netlify.app) for a live demo.
@@ -33,7 +34,7 @@ Built with:
 [Clarifai AI vision platform](https://www.clarifai.com/)
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+Thanks to Flatiron School, Andrei Neagoie, and all the countless articles and tutorials I've come across
 
 ## License
 MIT © Michael Zamudio
