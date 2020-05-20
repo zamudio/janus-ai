@@ -4,7 +4,7 @@ import Clarifai from "clarifai";
 import Navigation from "../components/Navigation/Navigation";
 import Signin from "../components/Signin";
 import Register from "../components/Register";
-// import User from "../components/User";
+import User from "../components/User";
 import ImageLinkBar from "../components/ImageLinkBar";
 import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
 import "./_app.css";
@@ -83,15 +83,26 @@ class App extends Component {
     this.setState({ box: box });
   };
 
-  onInputChange = (event) => {
-    this.setState({ input: event.target.value });
+  onInputChange = (e) => {
+    this.setState({ input: e.target.value });
   };
 
-  onBtnSubmit = () => {
+  onPictureBtnSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-      .then((response) => this.displayFace(this.calcFaceLocation(response)))
+      .then((res) => {
+        if (res) {
+          fetch("http://localhost:3001/image", {
+            method: "put",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              id: this.state.user.id,
+            }),
+          });
+        }
+        this.displayFace(this.calcFaceLocation(res));
+      })
       .catch((err) => console.log(err));
   };
 
@@ -109,7 +120,7 @@ class App extends Component {
   };
 
   render() {
-    const { isSignedIn, isAtRegister, imageUrl, route, box } = this.state;
+    const { isSignedIn, isAtRegister, imageUrl, route, box, user } = this.state;
 
     return (
       <div className="App">
@@ -121,9 +132,10 @@ class App extends Component {
         />
         {route === "home" ? (
           <div>
+            <User name={user.name} entries={user.entries} />
             <ImageLinkBar
               onInputChange={this.onInputChange}
-              onBtnSubmit={this.onBtnSubmit}
+              onPictureBtnSubmit={this.onPictureBtnSubmit}
             />
             <FaceRecognition box={box} imageUrl={imageUrl} />
           </div>
@@ -133,7 +145,7 @@ class App extends Component {
             onRouteChange={this.onRouteChange}
           />
         ) : (
-          <Signin onRouteChange={this.onRouteChange} />
+          <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
         )}
       </div>
     );

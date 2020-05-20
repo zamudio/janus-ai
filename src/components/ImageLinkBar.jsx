@@ -3,7 +3,7 @@ import React from "react";
 const ImageLinkBar = ({ onInputChange, onBtnSubmit }) => {
   return (
     <div className="">
-      <p className="f3">
+      <p className="f4">
         {
           "The Janus app will detect faces in your pictures. Give it a try by pasting a URL below."
         }
