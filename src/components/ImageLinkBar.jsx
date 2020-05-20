@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageLinkBar = ({ onInputChange, onBtnSubmit }) => {
+const ImageLinkBar = ({ onInputChange, onPictureBtnSubmit }) => {
   return (
     <div className="">
       <p className="f4">
@@ -13,7 +13,7 @@ const ImageLinkBar = ({ onInputChange, onBtnSubmit }) => {
           <input className="f4 pa2 w-70" type="text" onChange={onInputChange} />
           <button
             className="w-30 grow f4 link pv2 dib white bg-light-purple"
-            onClick={onBtnSubmit}
+            onClick={onPictureBtnSubmit}
           >
             Detect
           </button>
