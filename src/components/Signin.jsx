@@ -18,7 +18,20 @@ class Signin extends Component {
   };
 
   onSubmitSignIn = () => {
-    console.log(this.state);
+    fetch("http://localhost:3001/signin", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: this.state.signInEmail,
+        password: this.state.signInPassword,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data === "success") {
+          this.props.onRouteChange("home");
+        }
+      });
   };
 
   render() {
@@ -39,6 +52,7 @@ class Signin extends Component {
                   type="email"
                   name="email-address"
                   id="email-address"
+                  onChange={this.onEmailChange}
                 />
               </div>
               <div className="mv3">
@@ -50,13 +64,13 @@ class Signin extends Component {
                   type="password"
                   name="password"
                   id="password"
+                  onChange={this.onPasswordChange}
                 />
               </div>
             </fieldset>
             <div className="">
               <input
-                // callback
-                onClick={() => onRouteChange("home")}
+                onClick={this.onSubmitSignIn}
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Login"
