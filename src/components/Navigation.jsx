@@ -5,7 +5,7 @@ import "../styles/components/_navigation.css";
 const Navigation = ({ onRouteChange, isSignedIn, isAtRegister }) => {
   if (isSignedIn) {
     return (
-      <nav className="flex justify-between ">
+      <nav className="flex justify-between">
         <Logo />
         <p
           onClick={() => onRouteChange("signout")}
@@ -31,6 +31,12 @@ const Navigation = ({ onRouteChange, isSignedIn, isAtRegister }) => {
     return (
       <nav className="flex justify-between">
         <Logo />
+        <p
+          onClick={() => onRouteChange("register")}
+          className="f3 link dim black underline pa3 pointer"
+        >
+          Sign Up
+        </p>
       </nav>
     );
   }
