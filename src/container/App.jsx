@@ -84,14 +84,14 @@ class App extends Component {
 
   onPictureBtnSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("https://aqueous-sierra-04321.herokuapp.com:3001/imageurl", {
+    fetch("https://aqueous-sierra-04321.herokuapp.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         input: this.state.input,
       }),
     })
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((res) => {
         if (res) {
           // fetch to api
