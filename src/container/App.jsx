@@ -95,7 +95,7 @@ class App extends Component {
       .then((res) => {
         if (res) {
           // fetch to api
-          fetch("https://aqueous-sierra-04321.herokuapp.com:3001/image", {
+          fetch("https://aqueous-sierra-04321.herokuapp.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
