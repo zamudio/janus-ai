@@ -1,6 +1,5 @@
-## SmartBrain-AI
+## Janus-AI
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5b49b11b-f07b-4aac-8b9c-b4253cbac354/deploy-status)](https://app.netlify.com/sites/smartbrain-ai/deploys)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
@@ -8,12 +7,12 @@ This app allows a user to sign up and upload photos that a ML algorithm will be 
 
 ## Screenshot
 
-<img src="https://github.com/zamudio/smartbrain-ai/blob/master/public/project_screenshot_face.png" alt="screenshot" width="450" height="250" />
-<img src="https://github.com/zamudio/smartbrain-ai/blob/master/public/project_screenshot_home.png" alt="screenshot" width="450" height="250" />
+<img src="https://github.com/zamudio/janus-ai/blob/master/public/project_screenshot_face.png" alt="screenshot" width="450" height="250" />
+<img src="https://github.com/zamudio/janus-ai/blob/master/public/project_screenshot_home.png" alt="screenshot" width="450" height="250" />
 
 ## How to use?
 
-Go [here](https://smartbrain-ai.netlify.app) for a live demo.
+Go [here]() for a live demo.
 
 Sign up, upload an image by URL, a ML face recognition algorithm will highlight the faces in the picture
 
