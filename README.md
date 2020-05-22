@@ -41,7 +41,7 @@ Built with:
 
 ## Credits
 
-Thanks to Flatiron School, Andrei Neagoie, and all the countless articles and tutorials I've come across
+Thanks to Flatiron School, Andrei Neagoie, and all the countless articles and tutorials that I've come across
 
 ## License
 
