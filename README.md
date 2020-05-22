@@ -12,7 +12,7 @@ This app allows a user to sign up and upload photos that a ML algorithm will be 
 
 ## How to use?
 
-Go [here]() for a live demo.
+Go [here](https://janus-ai.herokuapp.com/) for a live demo.
 
 Sign up, upload an image by URL, a ML face recognition algorithm will highlight the faces in the picture
 
