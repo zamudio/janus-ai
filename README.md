@@ -18,6 +18,8 @@ Sign up, upload an image by URL, a ML face recognition algorithm will highlight 
 
 ## Tech/framework used
 
+Go [here](https://github.com/zamudio/janus-ai-api) to view the source code for the backend API built using Node.js and Express.js
+
 Built with:
 
 - [React](https://es.reactjs.org/)
